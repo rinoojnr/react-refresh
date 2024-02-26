@@ -1,10 +1,20 @@
 function ExpenseItem() {
-    return (
-        <div>
-            <h2>Expense Items</h2>
-            <h2>Food Rs 10</h2>
-            <h2>Petrol Rs 100</h2>
-            <h2>Movies Rs 200</h2>
+    const expenseDate = new Date(2024, 1, 26);
+    const expenseTitle = 'Car insurance';
+    const expenseAmount = 290;
+    const LocationOfExpenditure = 'Bangalore';
+    return ( 
+        <div className="expense-item">
+            <div><h2>{expenseDate.toISOString()}</h2></div>
+            <div className="expense-item__description">
+                <h2>{expenseTitle}</h2>
+            </div>
+            <div className="expense-item__price">
+                <div><h2>${expenseAmount}</h2></div>
+            </div>
+            <div className="expense-item__location">
+                <h2>{LocationOfExpenditure}</h2>
+            </div>
         </div>
     )
 }
