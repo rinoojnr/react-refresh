@@ -1,19 +1,24 @@
-function ExpenseItem() {
-    const expenseDate = new Date(2024, 1, 26);
-    const expenseTitle = 'Car insurance';
-    const expenseAmount = 290;
-    const LocationOfExpenditure = 'Bangalore';
+function ExpenseItem(props) {
+    const month = props.date.toLocaleString('en-US', { month: 'long' });
+    const day = props.date.toLocaleString('en-US', { day: '2-digit' });
+    const year = props.date.getFullYear();
+
+
     return ( 
         <div className="expense-item">
-            <div><h2>{expenseDate.toISOString()}</h2></div>
+            <div>
+                <div>{ month }</div>
+                <div>{ day }</div>
+                <div>{ year }</div>
+            </div>
             <div className="expense-item__description">
-                <h2>{expenseTitle}</h2>
+                <h2>{props.title}</h2>
             </div>
             <div className="expense-item__price">
-                <div><h2>${expenseAmount}</h2></div>
+                <div><h2>${props.amount}</h2></div>
             </div>
             <div className="expense-item__location">
-                <h2>{LocationOfExpenditure}</h2>
+                <h2>{props.LocationOfExpenditure}</h2>
             </div>
         </div>
     )
