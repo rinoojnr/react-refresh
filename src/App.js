@@ -1,4 +1,4 @@
-import ExpenseItem from './components/ExpenseItem';
+import Expense from './components/Expenses/Expense';
 
 function App() {
   const expenses = [
@@ -31,14 +31,14 @@ function App() {
       LocationOfExpenditure: 'Calicut'
     }
   ];
-  const arr = [];
-  for(let i=0;i<expenses.length;i++){
-        arr.push(<ExpenseItem title={expenses[i].title} amount={expenses[i].amount} date={expenses[i].date} LocationOfExpenditure={expenses[i].LocationOfExpenditure} />)
-  }
+  // const arr = [];
+  // for(let i=0;i<expenses.length;i++){
+  //       arr.push(<Expense item={expenses} />)
+  // }
   return (
     <div className="App">
       <h2>Let's get started</h2>
-      <div>{arr}</div>
+      <div><Expense items={expenses} /></div>
       {/* <ExpenseItem title={expenses[0].title} amount={expenses[0].amount} date={expenses[0].date} LocationOfExpenditure={expenses[0].LocationOfExpenditure}></ExpenseItem>
       <ExpenseItem title={expenses[1].title} amount={expenses[1].amount} date={expenses[1].date} LocationOfExpenditure={expenses[1].LocationOfExpenditure}></ExpenseItem>
       <ExpenseItem title={expenses[2].title} amount={expenses[2].amount} date={expenses[2].date} LocationOfExpenditure={expenses[2].LocationOfExpenditure}></ExpenseItem>
