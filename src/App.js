@@ -1,4 +1,5 @@
 import Expense from './components/Expenses/Expense';
+import ExpenseForm from './components/Expenses/ExpenseForm';
 
 function App() {
   const expenses = [
@@ -38,6 +39,7 @@ function App() {
   return (
     <div className="App">
       <h2>Let's get started</h2>
+      <ExpenseForm />
       <div><Expense items={expenses} /></div>
       {/* <ExpenseItem title={expenses[0].title} amount={expenses[0].amount} date={expenses[0].date} LocationOfExpenditure={expenses[0].LocationOfExpenditure}></ExpenseItem>
       <ExpenseItem title={expenses[1].title} amount={expenses[1].amount} date={expenses[1].date} LocationOfExpenditure={expenses[1].LocationOfExpenditure}></ExpenseItem>
