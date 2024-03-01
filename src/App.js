@@ -36,11 +36,19 @@ function App() {
   // for(let i=0;i<expenses.length;i++){
   //       arr.push(<Expense item={expenses} />)
   // }
+  const saveExpenseDataHandler = (enteredExpenseData) =>{
+      const expenseData = {
+        ...enteredExpenseData,
+        id: Math.random().toString()
+      }
+      expenses.push(expenseData)
+      console.log(expenses,"....")
+  }
   return (
     <div className="App">
       <h2>Let's get started</h2>
-      <ExpenseForm />
-      <div><Expense items={expenses} /></div>
+      <ExpenseForm onSaveExpenseData={saveExpenseDataHandler}/>
+      <div><Expense items={expenses} /></div> 
       {/* <ExpenseItem title={expenses[0].title} amount={expenses[0].amount} date={expenses[0].date} LocationOfExpenditure={expenses[0].LocationOfExpenditure}></ExpenseItem>
       <ExpenseItem title={expenses[1].title} amount={expenses[1].amount} date={expenses[1].date} LocationOfExpenditure={expenses[1].LocationOfExpenditure}></ExpenseItem>
       <ExpenseItem title={expenses[2].title} amount={expenses[2].amount} date={expenses[2].date} LocationOfExpenditure={expenses[2].LocationOfExpenditure}></ExpenseItem>
