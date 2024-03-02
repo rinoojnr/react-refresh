@@ -7,28 +7,28 @@ const DUMMY_DATA = [
     id: 'e1',
     title: 'car insurance', 
     amount: 849,
-    date: new Date(2024, 1, 26),
+    date: new Date(2020 , 1, 26),
     LocationOfExpenditure: 'Bangalore'
   },
   { 
     id: 'e2',
     title: 'bike insurance', 
     amount: 895,
-    date: new Date(2021, 1, 26),
+    date: new Date(2020, 1, 26),
     LocationOfExpenditure: 'Africa'
   },
   { 
     id: 'e3',
     title: 'Bike', 
     amount: 8935,
-    date: new Date(2026, 1, 26),
+    date: new Date(2021, 1, 26),
     LocationOfExpenditure: 'Kerala'
   },
   { 
     id: 'e4',
     title: 'Grocerry', 
     amount: 45,
-    date: new Date(2024, 1, 26),
+    date: new Date(2022, 1, 26),
     LocationOfExpenditure: 'Calicut'
   }
 ];
